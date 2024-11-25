@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 I am currently a first-year PhD student at Shanghai Jiao Tong University (SJTU), specializing in computer vision under the supervision of Prof. Weidi Xie.
-Prior to this, I obtained a B.E. in Computer Science from Beijing University of Posts and Telecommunications. 
+Prior to this, I obtained a B.E. in Computer Science from Beijing University of Posts and Telecommunications (BUPT). 
 During my undergraduate studies, I was fortunate to be advised by Prof. Li Yi at Tsinghua University.
 
 
