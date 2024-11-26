@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About me"
+title: "Haolin Yang 杨浩林"
 author_profile: true
 redirect_from: 
   - /about/
