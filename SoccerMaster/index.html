@@ -341,7 +341,7 @@
       <!-- TODO: Replace with your teaser video -->
       <img src="static/images/teaser.jpg" alt="Teaser" loading="lazy"/>
       <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-left" style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem;"></h2>
+      <h2 class="subtitle has-text-left" style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1.5rem;"></h2>
         <strong>SoccerMaster</strong> is a unified soccer-specific vision foundation model that leverages diverse soccer content, including images and videos, to support a wide range of soccer understanding tasks, such as commentary generation, detection, tracking, classification, <em>etc</em>.
       </h2>
     </div>
@@ -382,7 +382,7 @@
         <div class="columns is-centered has-text-centered"><h2 class="title is-3">Pretraining Dataset</h2></div>
         <div class="image-item">
           <img src="./static/images/pipeline.png" alt="Automated Data Curation Pipeline"/>
-          <h2 class="subtitle" style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+          <h2 class="subtitle" style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1.5rem;">
             <strong>Automated Data Curation Pipeline.</strong> Our pipeline processes input videos through three stages: (i) field registration establishes geometric correspondences between image and canonical pitch coordinates via keypoint detection; (ii) tracking and identification transforms frames into athlete trajectories through detection, role and team classification, and ReID-based tracking; and (iii) post-processing refinement improves tracking accuracy through SAM2-based segmentation and ensures temporal consistency via majority voting. The automatically generated data are integrated with existing datasets (SoccerNet-GSR, SoccerNet-v2, MatchTime, and SoccerReplay-1988) to construct <strong>SoccerFactory</strong>, a comprehensive pretraining dataset comprising 7.45M frames across 248.3K video segments for unified pretraining of both spatial perception and semantic reasoning tasks.
           </h2>
         </div>
@@ -390,7 +390,7 @@
         <div class="columns is-centered has-text-centered"><h2 class="title is-3">Architecture</h2></div>
         <div class="image-item">
           <img src="./static/images/method.jpg" alt="SoccerMaster Architecture"/>
-          <h2 class="subtitle" style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+          <h2 class="subtitle" style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1.5rem;">
             <strong>SoccerMaster Architecture.</strong> (a) The architecture of SoccerMaster, which encodes both soccer videos and images through spatial and temporal attention modules to generate semantically rich representations. (b) The pretraining tasks and downstream adaptations of SoccerMaster across both spatial perception and semantic understanding tasks.
           </h2>
         </div>
@@ -398,25 +398,25 @@
         <div class="columns is-centered has-text-centered"><h2 class="title is-3">Experiments</h2></div>
         <div class="image-item">
           <img src="./static/images/performance_pretraining_tasks.png" alt="Performance Comparison on Pretraining Tasks"/>
-          <h2 class="subtitle" style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+          <h2 class="subtitle" style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1.5rem;">
             <strong>Performance Comparison on Pretraining Tasks.</strong> We compare SoccerMaster against both general-purpose VFMs (SigLIP2-L/16-512 and DINOv3-L/16) and the soccer-specific MatchVision using frozen encoders with trainable task-specific heads. "Pipeline Data" indicates training augmented with automatically generated data from our pipeline alongside existing datasets. Metrics include AP@50 and mAP for detection, jersey number (jn) and role classification accuracy, keypoint/line detection metrics, event classification accuracy, and video-commentary retrieval top-1 accuracy (computed within batches of 48).
           </h2>
         </div>
         <div class="image-item has-text-centered">
           <img src="./static/images/performance_camera_calibration.png" alt="Performance Comparison on Camera Calibration" style="max-width: 50%; height: auto;"/>
-          <h2 class="subtitle has-text-left" style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+          <h2 class="subtitle has-text-left" style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1.5rem;">
             <strong>Performance Comparison on Camera Calibration.</strong> We evaluate against PnlCalib on SoccerNet-22 and SoccerNet-23 benchmarks. Metrics include Jaccard index (JaC<sub>γ</sub>) at thresholds of 5, 10, and 20 pixels, completion rate (CR), and final score (FS = CR × JaC<sub>5</sub>). Our zero-shot model (*) already outperforms PnlCalib on SN22-test-center, while fine-tuned model (†) establishes new state-of-the-art at 512×512 resolution with +8.2 FS on SN22 and +4.4 FS on SN23.
           </h2>
         </div>
         <div class="image-item has-text-centered">
           <img src="./static/images/performance_tracking.png" alt="Performance Comparison on Multile Object Tracking" style="max-width: 55%; height: auto;"/>
-          <h2 class="subtitle has-text-left" style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+          <h2 class="subtitle has-text-left" style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1.5rem;">
             <strong>Performance Comparison on Multiple Object Tracking.</strong> We evaluate on the SoccerNet-tracking benchmark using standard MOT metrics. Unlike traditional tracking-by-detection paradigms that rely on separate detectors, Re-ID models, and complex post-processing, SoccerMaster employs an end-to-end pipeline. Our model achieves the best detection capability (DetA: 65.2), competitive association performance (AssA: 53.9), and strong overall tracking metrics (HOTA: 59.1, MOTA: 81.6, IDF1: 74.6), demonstrating effective transferability through lightweight fine-tuning.
           </h2>
         </div>
         <div class="image-item has-text-centered">
           <img src="./static/images/performance_commentary_generation.png" alt="Performance Comparison on Commentary Generation" style="max-width: 50%; height: auto;"/>
-          <h2 class="subtitle has-text-left" style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+          <h2 class="subtitle has-text-left" style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1.5rem;">
             <strong>Performance Comparison on Commentary Generation.</strong> We evaluate on the SN-Caption-test-align benchmark using standard natural language generation metrics including BLEU, METEOR, ROUGE-L, and CIDEr. SoccerMaster achieves the best results on BLEU@1 (31.3), BLEU@4 (8.9), and CIDEr (38.6), with notable improvements over the soccer-specific MatchVision (+2.9 on CIDEr). The strong CIDEr performance demonstrates that multi-task pretraining fosters rich semantic representations that effectively transfer to language generation tasks.
           </h2>
         </div>
@@ -424,7 +424,7 @@
         <div class="columns is-centered has-text-centered"><h2 class="title is-3">Ablation Study</h2></div>
         <div class="image-item has-text-centered">
           <img src="./static/images/ablation_generated_data.png" alt="Ablation Study on the Impact of Automatically Generated Spatial Annotations" style="max-width: 100%; height: auto;"/>
-          <h2 class="subtitle has-text-left" style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+          <h2 class="subtitle has-text-left" style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1.5rem;">
             <strong>Ablation Study on the Impact of Automatically Generated Spatial Annotations.</strong> We evaluate the effectiveness of incorporating pipeline-generated spatial annotations during pretraining. Using a compact SoccerMaster variant, the inclusion of pipeline-generated data yields substantial improvements in spatial perception tasks, particularly athlete detection (+4.3 AP@50, +7.3 mAP), while maintaining stable or slightly improved performance on other pretraining tasks. This confirms that our automatically curated annotations provide a reliable and scalable source of training data.
           </h2>
         </div>
@@ -432,20 +432,20 @@
         <div class="columns is-centered has-text-centered"><h2 class="title is-3">Qualitative Results</h2></div>
         <div class="image-item">
           <img src="./static/images/qualitative_pipeline.jpg" alt="Qualitative Results of Automatic Data Curation Pipeline"/>
-          <h2 class="subtitle" style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+          <h2 class="subtitle" style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1.5rem;">
             <strong>Qualitative Results of Automatic Data Curation Pipeline.</strong> Comparison between our predictions (left) and ground truth annotations (right) on the SoccerNet-GSR test set. Each detected athlete is annotated with five attributes: ID (tracklet identity), R (role), L (legibility score), JN (jersey number), and T (team affiliation). For field registration, detected keypoints and field lines are highlighted in yellow and red, respectively, while lines projected from the canonical pitch via estimated camera parameters are shown in blue. Our pipeline demonstrates robust performance across diverse scenarios, maintaining high accuracy in role classification, jersey number recognition, and team affiliation even under challenging conditions.
           </h2>
         </div>
         <div class="image-item">
           <img src="./static/images/qualitative_bev.jpg" alt="Top-view Pitch Visualization of Pipeline Results"/>
-          <h2 class="subtitle" style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+          <h2 class="subtitle" style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1.5rem;">
             <strong>Top-view Pitch Visualization of Pipeline Results.</strong> Athlete positions are mapped to standardized pitch coordinates via estimated camera parameters. Each row is organized as: input image (left), our predictions (middle), and ground truth annotations (right). Athletes are color-coded by role: referees (orange, labeled "RE"), left team (red), and right team (blue). Non-referee athletes are labeled with arbitrary <strong>tracklet identities</strong>, which maintain temporal consistency within each tracking sequence. Notably, the number of tracklet identities in the predictions is not directly comparable to those in the ground truth; the emphasis is on consistent identity assignment across frames.
             The close alignment between predictions and ground truth demonstrates the pipeline's capability to accurately estimate camera parameters and maintain consistent athlete tracking, which can facilitate downstream applications such as tactical analysis.
           </h2>
         </div>
         <div class="image-item">
           <img src="./static/images/qualitative_soccermaster.jpg" alt="Qualitative Results of SoccerMaster"/>
-          <h2 class="subtitle" style="font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1.5rem;">
+          <h2 class="subtitle" style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1.5rem;">
             <strong>Qualitative Results of SoccerMaster.</strong> SoccerMaster simultaneously executes multiple soccer understanding tasks on a video clip, including athlete detection, pitch registration, multiple object tracking, event classification, and commentary generation. 
             Frames are arranged in temporal order from left to right and top to bottom. 
             The model exhibits strong performance across all tasks: even in crowded scenes. 
