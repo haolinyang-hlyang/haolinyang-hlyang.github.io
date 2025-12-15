@@ -1,1 +1,9 @@
-coming soon
+@misc{yang2025soccermastervisionfoundationmodel,
+      title={SoccerMaster: A Vision Foundation Model for Soccer Understanding}, 
+      author={Haolin Yang and Jiayuan Rao and Haoning Wu and Weidi Xie},
+      year={2025},
+      eprint={2512.11016},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2512.11016}, 
+}
