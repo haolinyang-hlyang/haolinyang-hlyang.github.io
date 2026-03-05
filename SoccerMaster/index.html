@@ -279,6 +279,13 @@
                     <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
+                  <div class="is-size-5 publication-authors">
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                    <span class="author-block">CVPR 2026</span>
+                    <!-- TODO: Remove this line if no equal contribution -->
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- TODO: Update with your arXiv paper ID -->
@@ -355,21 +362,40 @@
   </div>
 </section>
 
-
 <!-- Teaser video-->
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <img src="static/images/teaser.jpg" alt="Teaser" loading="lazy"/>
+      <div style="width: 100vw; position: relative; left: 50%; transform: translateX(-50%); height: 525px;">
+        <iframe
+          src="//player.bilibili.com/player.html?bvid=BV1ugkcB9Eqz&autoplay=0&high_quality=1"
+          style="width: 65%; height: 100%; display: block; margin: 0 auto;"
+          frameborder="0"
+          scrolling="no"
+          allowfullscreen>
+        </iframe>
+      </div>
       <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-left" style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1.5rem;"></h2>
-        <strong>SoccerMaster</strong> is a unified soccer-specific vision foundation model that leverages diverse soccer content, including images and videos, to support a wide range of soccer understanding tasks, such as commentary generation, detection, tracking, classification, <em>etc</em>.
+      <h2 class="subtitle has-text-centered">
+        SoccerMaster Demostration
       </h2>
     </div>
   </div>
 </section>
 <!-- End teaser video -->
+
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/teaser.jpg" alt="Teaser" loading="lazy"/>
+      <h2 class="subtitle has-text-left" style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1.5rem;">
+        <strong>SoccerMaster</strong> is a unified soccer-specific vision foundation model that leverages diverse soccer content, including images and videos, to support a wide range of soccer understanding tasks, such as commentary generation, detection, tracking, classification, <em>etc</em>.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
