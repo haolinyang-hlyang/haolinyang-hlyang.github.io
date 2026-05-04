@@ -14,7 +14,7 @@ name                     : &name "Haolin Yang"
 description              : &description "A PhD student at Shanghai Jiao Tong University (SJTU), under the supervision of Weidi Xie."
 url                      : https://haolinyang-hlyang.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "haolinyang-hlyang/haolinyang-hlyang.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -75,13 +75,13 @@ author:
   zhihu            : # Username
 
 # Publication Category - The following the list of publication categories and their headings
-publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
+# publication_category:
+#   books:
+#     title: 'Books'
+#   manuscripts:
+#     title: 'Journal Articles'    
+#   conferences:
+#     title: 'Conference Papers'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"

@@ -1,0 +1,43 @@
+{% include base_path %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="pub-card">
+  {% if post.teaser %}
+  <div class="pub-card__image">
+    <img src=
+      {% if post.teaser contains "://" %}
+        "{{ post.teaser }}"
+      {% else %}
+        "{{ post.teaser | prepend: "/images/" | prepend: base_path }}"
+      {% endif %}
+      alt="{{ title }}">
+  </div>
+  {% endif %}
+  <div class="pub-card__content" {% unless post.teaser %}style="flex: 1 1 100%;"{% endunless %}>
+    <h3 class="pub-card__title">
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}">{{ title }}</a>
+      {% elsif post.arxivurl %}
+        <a href="{{ post.arxivurl }}">{{ title }}</a>
+      {% else %}
+        {{ title }}
+      {% endif %}
+    </h3>
+    {% if post.authors %}
+      <p class="pub-card__authors">{{ post.authors }}</p>
+    {% endif %}
+    {% if post.venue %}
+      <p class="pub-card__venue"><em>{{ post.venue }}</em>, {{ post.date | default: "1900-01-01" | date: "%Y" }}{% if post.note %} (<strong>{{ post.note }}</strong>){% endif %}</p>
+    {% endif %}
+    <p class="pub-card__links">
+      {% if post.projecturl %}[<a href="{{ post.projecturl }}">Project Page</a>]{% endif %}
+      {% if post.codeurl %} [<a href="{{ post.codeurl }}">Code</a>]{% endif %}
+      {% if post.arxivurl %} [<a href="{{ post.arxivurl }}">Paper</a>]{% elsif post.paperurl %} [<a href="{{ post.paperurl }}">Paper</a>]{% endif %}
+    </p>
+  </div>
+</div>
