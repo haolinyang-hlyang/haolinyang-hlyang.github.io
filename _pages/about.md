@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Haolin Yang"
+# title: "Haolin Yang"
 author_profile: true
 redirect_from: 
   - /about/
